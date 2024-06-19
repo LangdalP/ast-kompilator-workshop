@@ -59,7 +59,7 @@ def parseFile(path):
   stream = CommonTokenStream(lexer)
   parser = MathParser(stream)
   tree = parser.expr()
-  print(tree.toStringTree(recog=parser))
+  # print(tree.toStringTree(recog=parser))
   MathProgram(tree).run()
 
 if __name__ == "__main__":

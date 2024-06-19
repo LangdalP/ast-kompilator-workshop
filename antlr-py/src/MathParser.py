@@ -88,14 +88,6 @@ class MathParser ( Parser ):
         def getRuleIndex(self):
             return MathParser.RULE_expr
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpr" ):
-                listener.enterExpr(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpr" ):
-                listener.exitExpr(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitExpr" ):
                 return visitor.visitExpr(self)
@@ -170,14 +162,6 @@ class MathParser ( Parser ):
 
         def getRuleIndex(self):
             return MathParser.RULE_term
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTerm" ):
-                listener.enterTerm(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTerm" ):
-                listener.exitTerm(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitTerm" ):
@@ -258,14 +242,6 @@ class MathParser ( Parser ):
         def getRuleIndex(self):
             return MathParser.RULE_factor
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFactor" ):
-                listener.enterFactor(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFactor" ):
-                listener.exitFactor(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitFactor" ):
                 return visitor.visitFactor(self)
@@ -327,14 +303,6 @@ class MathParser ( Parser ):
         def getRuleIndex(self):
             return MathParser.RULE_number
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNumber" ):
-                listener.enterNumber(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNumber" ):
-                listener.exitNumber(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitNumber" ):
                 return visitor.visitNumber(self)
@@ -373,14 +341,6 @@ class MathParser ( Parser ):
 
         def getRuleIndex(self):
             return MathParser.RULE_identifier
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifier" ):
-                listener.enterIdentifier(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifier" ):
-                listener.exitIdentifier(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitIdentifier" ):

@@ -13,6 +13,9 @@ factor : '(' expr ')'
 number: NUM;
 identifier: ID;
 
+LEFT_PAREN  : '(' ;
+RIGHT_PAREN : ')' ;
+
 ID : [a-zA-Z_] [a-zA-Z0-9_]* ;
 NUM : '-'? [0-9]+ ( '.' [0-9]*)?;
 
