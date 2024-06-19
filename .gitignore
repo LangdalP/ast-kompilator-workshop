@@ -1,0 +1,8 @@
+
+.DS_Store
+*.pyc
+*.interp
+*.tokens
+.antlr/
+
+~$Presentasjon.pptx
